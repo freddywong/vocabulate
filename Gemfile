@@ -20,5 +20,9 @@ group :development, :test do
   gem 'sqlite3'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem "spring-commands-rspec"
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
 end
 
