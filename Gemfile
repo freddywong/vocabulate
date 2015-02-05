@@ -20,5 +20,8 @@ group :development, :test do
   gem 'sqlite3'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'rspec-rails'
 end
 
