@@ -18,3 +18,7 @@
 //= require_tree ./templates
 //= require_tree ./views
 //= require_tree .
+
+$(function() {
+  Backbone.history.start({ pushState: true });
+});
