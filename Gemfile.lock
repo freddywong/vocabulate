@@ -50,12 +50,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-<<<<<<< HEAD
     capybara-webkit (1.4.1)
       capybara (>= 2.3.0, < 2.5.0)
       json
-=======
->>>>>>> fdc2af338762c6f34911399b710f3efbf8866ab6
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -69,11 +66,6 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.3.0)
-    factory_girl (4.5.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.5.0)
-      factory_girl (~> 4.5.0)
-      railties (>= 3.0.0)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     handlebars_assets (0.18)
@@ -164,8 +156,6 @@ GEM
       rdoc (~> 4.0)
     slop (3.6.0)
     spring (1.2.0)
-    spring-commands-rspec (1.0.4)
-      spring (>= 0.9.1)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -200,12 +190,8 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
-<<<<<<< HEAD
   capybara-webkit
-=======
->>>>>>> fdc2af338762c6f34911399b710f3efbf8866ab6
   coffee-rails (~> 4.1.0)
-  factory_girl_rails
   handlebars_assets
   jbuilder (~> 2.0)
   jquery-rails
@@ -216,7 +202,6 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
-  spring-commands-rspec
   sqlite3
   turbolinks
   uglifier (>= 1.3.0)
