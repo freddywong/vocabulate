@@ -3,7 +3,7 @@
 var App = App || {};
 
 (function(App) {
-  App.QuestionsView = Backbone.View.extend({
+  App.QuestionView = Backbone.View.extend({
 
     initialize: function() {
       App.questionsCollection.on("add", this.render, this);
@@ -15,10 +15,14 @@ var App = App || {};
         return question.get("times_correct");
       });
 
-      var 
+      var questionPool = questionsSequence.slice(0, 5);
+
+      $.each(questionPool, function(index, question){
+        
+      })
 
       this.$el.html(
-        HandlebarsTemplates['questions/index']({ questions: questionsSequence })
+        HandlebarsTemplates['questions/show']({ questions: questionPool })
       );
       return this;
     }

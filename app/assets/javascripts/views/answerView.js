@@ -3,7 +3,7 @@
 var App = App || {};
 
 (function(App) {
-  App.AnswersView = Backbone.View.extend({
+  App.AnswerView = Backbone.View.extend({
 
     initialize: function() {
       App.answersCollection.on("add", this.render, this);
@@ -11,7 +11,7 @@ var App = App || {};
 
     render: function() {
       this.$el.html(
-        HandlebarsTemplates['answers/index']({ answers: App.answersCollection.toJSON() })
+        HandlebarsTemplates['answers/show']({ answers: App.answersCollection.toJSON() })
       );
 
       return this;

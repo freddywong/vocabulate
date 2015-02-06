@@ -5,8 +5,8 @@ var App = App || {};
 (function(App) {
   App.Router = Backbone.Router.extend({
     routes: {
-      'questions': 'questions',
-      'answers': 'answers'
+      'question': 'question',
+      'answer': 'answer'
     },
 
     initialize: function() {
@@ -14,15 +14,15 @@ var App = App || {};
       $("#app-container").html(App.rootView.render().el);
     },
 
-    questions: function() {
+    question: function() {
       App.questionsCollection.fetch().then(function() {
-        App.rootView.display(App.QuestionsView);
+        App.rootView.display(App.QuestionView);
       });
     },
 
-    answers: function() {
+    answer: function() {
       App.answersCollection.fetch().then(function() {
-        App.rootView.display(App.AnswersView);
+        App.rootView.display(App.AnswerView);
       })
     }
   });  
