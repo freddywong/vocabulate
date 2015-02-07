@@ -16,7 +16,7 @@ var App = App || {};
 
     question: function() {  
       App.questionsCollection.fetch().then(function() {
-        App.rootView.displayContent(App.QuestionView);
+        App.rootView.displayQuestion(App.QuestionView);
       });
     },
 

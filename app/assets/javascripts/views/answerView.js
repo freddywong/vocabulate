@@ -4,6 +4,9 @@ var App = App || {};
 
 (function(App) {
   App.AnswerView = Backbone.View.extend({
+    events: {
+      'click .show-question': 'showQuestion'
+    },
 
     initialize: function() {
       App.answersCollection.on("add", this.render, this);
@@ -23,6 +26,12 @@ var App = App || {};
         );
       }
       return this;
+    },
+
+    showQuestion: function() {
+      App.questionsCollection.fetch().then(function() {
+        App.rootView.displayQuestion(App.QuestionView);
+      })
     }
   });
 })(App);

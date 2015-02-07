@@ -12,7 +12,7 @@ var App = App || {};
       return this;
     },
 
-    displayContent: function(View) {
+    displayQuestion: function(View) {
       var sequenceNumber = this.$el.find(".app-content").data("sequence")
       this.currentView = new View();
       this.$el.find(".app-content").html(this.currentView.render(sequenceNumber).el);
