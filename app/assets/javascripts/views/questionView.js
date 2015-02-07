@@ -12,24 +12,23 @@ var App = App || {};
       App.questionsCollection.on("add", this.render, this);
     },
 
-    render: function(sequenceNumber) {
-      var questionsSequence = App.questionsCollection.sortBy(function(question) {
-        return question.get("times_correct");
-      });
+    render: function() {
+      var sequenceNumber = Number($(".app-content").attr("data-sequence"))
+      console.log(sequenceNumber)
 
-      var questionPool = questionsSequence.slice(0, 5);
-
-      var question = questionPool[sequenceNumber]
-      
-      if ( sequenceNumber < 6 ) {
-        sequenceNumber = $(".app-content").data("sequence") + 1;
-      } else {
-        sequenceNumber
-      }
+      var question = App.questionsCollection.questionSequence(sequenceNumber);
 
       this.$el.html(
         HandlebarsTemplates['questions/show']({ question: question })
       );
+
+      if ( sequenceNumber < 6 ) {
+        sequenceNumber += 1;
+
+        $(".app-content").attr("data-sequence", sequenceNumber);
+      } else {
+        sequenceNumber
+      }
       return this;
     },
 
