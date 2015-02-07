@@ -9,9 +9,10 @@ var App = App || {};
       App.answersCollection.on("add", this.render, this);
     },
 
-    render: function() {
+    render: function(sequenceNumber, answerId) {
+      var answer = App.answersCollection.get(answerId).toJSON();
       this.$el.html(
-        HandlebarsTemplates['answers/show']({ answers: App.answersCollection.toJSON() })
+        HandlebarsTemplates['answers/show']({ answer: answer })
       );
 
       return this;

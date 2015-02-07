@@ -35,7 +35,7 @@ var App = App || {};
 
     listAnswers: function(){
       App.answersCollection.fetch().then(function() {
-        App.rootView.displayContent(App.AnswerView);
+        App.rootView.displayContent(App.AnswersView);
       })
     }
   });
