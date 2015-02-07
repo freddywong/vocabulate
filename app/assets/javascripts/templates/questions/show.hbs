@@ -5,12 +5,12 @@
     <th>Word</th>
     <th>Progress</th>
   </tr>
-  {{#each questions}}
-  <tr>
-    <td>{{attributes.word}}</td>
-    <td>{{attributes.times_correct}}</td>
+
+  <tr class="shell">
+    <td>{{question.attributes.word}}</td>
+    <td>{{question.attributes.times_correct}}</td>
   </tr> 
-  {{/each}}
+
 </table>
 
-<button class="show-answers">Next</button>
+<button class="list-answers">Next</button>

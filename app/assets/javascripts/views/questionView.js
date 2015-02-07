@@ -5,26 +5,38 @@ var App = App || {};
 (function(App) {
   App.QuestionView = Backbone.View.extend({
 
+    events: {
+      'click .list-answers': 'listAnswers'
+    },
     initialize: function() {
       App.questionsCollection.on("add", this.render, this);
     },
 
-    render: function() {
-
+    render: function(sequenceNumber) {
       var questionsSequence = App.questionsCollection.sortBy(function(question) {
         return question.get("times_correct");
       });
 
       var questionPool = questionsSequence.slice(0, 5);
 
-      $.each(questionPool, function(index, question){
-        
-      })
+      var question = questionPool[sequenceNumber]
+      
+      if ( sequenceNumber < 6 ) {
+        sequenceNumber = $(".app-content").data("sequence") + 1;
+      } else {
+        sequenceNumber
+      }
 
       this.$el.html(
-        HandlebarsTemplates['questions/show']({ questions: questionPool })
+        HandlebarsTemplates['questions/show']({ question: question })
       );
       return this;
+    },
+
+    listAnswers: function(){
+      App.answersCollection.fetch().then(function() {
+        App.rootView.displayContent(App.AnswerView);
+      })
     }
   });
 })(App);

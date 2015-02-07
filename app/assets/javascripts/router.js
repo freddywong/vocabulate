@@ -14,15 +14,15 @@ var App = App || {};
       $("#app-container").html(App.rootView.render().el);
     },
 
-    question: function() {
+    question: function() {  
       App.questionsCollection.fetch().then(function() {
-        App.rootView.display(App.QuestionView);
+        App.rootView.displayContent(App.QuestionView);
       });
     },
 
     answer: function() {
       App.answersCollection.fetch().then(function() {
-        App.rootView.display(App.AnswerView);
+        App.rootView.displayContent(App.AnswerView);
       })
     }
   });  
