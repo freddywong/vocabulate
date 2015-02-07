@@ -1,11 +1,14 @@
 <h2>Answers</h2>
 
 <table>
+{{#question}}
   <tr>
     <th>Sentence</th>
   </tr>
+{{/question}}
+
   {{#each answers}}
-  <tr class="answer" data-answer={{id}}>
+  <tr class="answer" data-answer={{id}} data-question="">
     <td>{{sentence}}</td>
   </tr> 
   {{/each}}

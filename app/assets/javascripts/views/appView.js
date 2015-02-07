@@ -12,11 +12,21 @@ var App = App || {};
       return this;
     },
 
-    displayContent: function(View, Id) {
-      console.log(Id)
+    displayContent: function(View) {
       var sequenceNumber = this.$el.find(".app-content").data("sequence")
       this.currentView = new View();
-      this.$el.find(".app-content").html(this.currentView.render(sequenceNumber, Id).el);
+      this.$el.find(".app-content").html(this.currentView.render(sequenceNumber).el);
+    },
+
+    displayAnswers: function(View, questionId) {
+      this.currentView = new View();
+      this.$el.find(".app-content").html(this.currentView.render(questionId).el);
+    },
+
+    displayAnswer: function(View, questionId, answerId) {
+      this.currentView = new View();
+      this.$el.find(".app-content").html(this.currentView.render(questionId, answerId).el);
     }
+
   });
 })(App);

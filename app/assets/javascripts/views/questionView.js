@@ -33,9 +33,12 @@ var App = App || {};
       return this;
     },
 
-    listAnswers: function(){
+    listAnswers: function(event){
+      var questionId = $(event.currentTarget).data("question");
       App.answersCollection.fetch().then(function() {
-        App.rootView.displayContent(App.AnswersView);
+        App.questionsCollection.fetch().then(function() {
+          App.rootView.displayAnswers(App.AnswersView, questionId);  
+        })
       })
     }
   });

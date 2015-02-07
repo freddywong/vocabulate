@@ -9,12 +9,19 @@ var App = App || {};
       App.answersCollection.on("add", this.render, this);
     },
 
-    render: function(sequenceNumber, answerId) {
+    render: function(questionId, answerId) {
       var answer = App.answersCollection.get(answerId).toJSON();
-      this.$el.html(
-        HandlebarsTemplates['answers/show']({ answer: answer })
-      );
 
+      if (questionId === answerId) {
+
+        this.$el.html(
+          HandlebarsTemplates['answers/correct']({ answer: answer })
+        );
+      } else {
+        this.$el.html(
+          HandlebarsTemplates['answers/incorrect']({ answer: answer })
+        );
+      }
       return this;
     }
   });
