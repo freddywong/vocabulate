@@ -14,22 +14,30 @@ var App = App || {};
 
     render: function() {
       var sequenceNumber = Number($(".app-content").attr("data-sequence"))
-      console.log(sequenceNumber)
+
 
       var question = App.questionsCollection.questionSequence(sequenceNumber);
 
-      this.$el.html(
-        HandlebarsTemplates['questions/show']({ question: question })
-      );
+      if ( sequenceNumber < 5 ) {
+        console.log(sequenceNumber)
+        this.$el.html(
+          HandlebarsTemplates['questions/show']({ question: question })
+        );
 
-      if ( sequenceNumber < 6 ) {
         sequenceNumber += 1;
-
+        
         $(".app-content").attr("data-sequence", sequenceNumber);
+
+
       } else {
-        sequenceNumber
+
+        this.$el.html(
+          HandlebarsTemplates['questions/results']()
+        );  
       }
+
       return this;
+
     },
 
     listAnswers: function(event){
