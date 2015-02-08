@@ -16,7 +16,10 @@ var App = App || {};
       var sequenceNumber = Number($(".app-content").attr("data-sequence"))
 
 
-      var question = App.questionsCollection.questionSequence(sequenceNumber);
+      var question = App.questionsCollection.question(sequenceNumber);
+
+      var questionPool = App.questionsCollection.questionPool();
+
 
       if ( sequenceNumber < 5 ) {
         console.log(sequenceNumber)
@@ -32,7 +35,7 @@ var App = App || {};
       } else {
 
         this.$el.html(
-          HandlebarsTemplates['questions/results']()
+          HandlebarsTemplates['questions/results']({ questions: questionPool })
         );  
       }
 

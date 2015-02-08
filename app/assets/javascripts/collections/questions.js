@@ -4,7 +4,7 @@ var App = App || {};
   App.Questions = Backbone.Collection.extend({
     url: "/api/questions",
     model: App.Question,
-    questionSequence: function(sequenceNumber) {
+    question: function(sequenceNumber) {
       var questionSequence = App.questionsCollection.sortBy(function(question) {
         return question.get("times_correct");
       });
@@ -14,7 +14,19 @@ var App = App || {};
       var question = questionPool[sequenceNumber]
       
       return question;
+    },
+
+    questionPool:  function() {
+      var questionSequence = App.questionsCollection.sortBy(function(question) {
+        return question.get("times_correct");
+      });
+
+      var questionPool = questionSequence.slice(0, 5);
+      
+      return questionPool;
     }
+
+
   });
 
   App.questionsCollection = new App.Questions();
