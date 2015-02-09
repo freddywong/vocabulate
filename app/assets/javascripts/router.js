@@ -14,6 +14,12 @@ var App = App || {};
       $("#app-container").html(App.rootView.render().el);
     },
 
+    quizzes: function() {
+      App.quizzesCollection.fetch().then(function() {
+        
+      })
+    },
+
     question: function() {  
       App.questionsCollection.fetch().then(function() {
         var questionSequence = App.questionsCollection.questionSequence();  
