@@ -11,7 +11,6 @@ var App = App || {};
 
     render: function() {
 
-
       var totalsForQuizzes = App.quizzesCollection.updateAllProgress();
 
       this.$el.html(

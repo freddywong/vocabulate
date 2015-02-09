@@ -2,6 +2,8 @@ Quiz.destroy_all
 Question.destroy_all
 Answer.destroy_all
 
+# User_quiz join table:
+
 # Quiz 1:
 Quiz.create(title: 'Japanese Core 1000', progress: 30)
 
