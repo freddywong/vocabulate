@@ -1,11 +1,25 @@
+Question.destroy_all
+Answer.destroy_all
+
+# Question.create(word: '帰る', times_correct: 3)
+# Question.create(word: '引き出し', times_correct: 2)
+# Question.create(word: '昨日', times_correct: 5)
+# Question.create(word: '職業', times_correct: 3)
+# Question.create(word: '家内', times_correct: 2)
+# Question.create(word: '冗談', times_correct: 5)
+# Question.create(word: 'クーラー', times_correct: 3)
+# Question.create(word: '不便', times_correct: 2)
+# Question.create(word: '昼休み', times_correct: 5)
+# Question.create(word: 'ラーメン', times_correct: 5)
+
 Question.create(word: '帰る', times_correct: 3)
 Question.create(word: '引き出し', times_correct: 2)
 Question.create(word: '昨日', times_correct: 5)
-Question.create(word: '職業', times_correct: 3)
-Question.create(word: '家内', times_correct: 2)
+Question.create(word: '職業', times_correct: 5)
+Question.create(word: '家内', times_correct: 5)
 Question.create(word: '冗談', times_correct: 5)
-Question.create(word: 'クーラー', times_correct: 3)
-Question.create(word: '不便', times_correct: 2)
+Question.create(word: 'クーラー', times_correct: 5)
+Question.create(word: '不便', times_correct: 5)
 Question.create(word: '昼休み', times_correct: 5)
 Question.create(word: 'ラーメン', times_correct: 5)
 

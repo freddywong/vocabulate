@@ -24,11 +24,8 @@ var App = App || {};
       var answerId = $(event.currentTarget).data("answer");
       var questionId = $(event.currentTarget).data("question");
 
-      App.answersCollection.fetch().then(function() {
-        App.questionsCollection.fetch().then(function(){
           App.rootView.displayAnswer(App.AnswerView, questionId, answerId);
-        })
-      })  
+
     } 
   });
 })(App);

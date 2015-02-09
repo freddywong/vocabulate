@@ -16,6 +16,8 @@ var App = App || {};
 
     question: function() {  
       App.questionsCollection.fetch().then(function() {
+        var questionSequence = App.questionsCollection.questionSequence();  
+        App.questionPool = App.questionsCollection.questionPool(questionSequence);
         App.rootView.displayQuestion(App.QuestionView);
       });
     },

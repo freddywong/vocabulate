@@ -16,7 +16,13 @@ var App = App || {};
       var answer = App.answersCollection.get(answerId).toJSON();
 
       if (questionId === answerId) {
-
+        var timesCorrect = App.questionsCollection.get(questionId).get("times_correct");
+        
+        if (timesCorrect < 5) {
+          timesCorrect += 1;  
+        } 
+        
+        App.questionsCollection.get(questionId).save({ times_correct: timesCorrect })
         this.$el.html(
           HandlebarsTemplates['answers/correct']({ answer: answer })
         );
@@ -29,9 +35,7 @@ var App = App || {};
     },
 
     showQuestion: function() {
-      App.questionsCollection.fetch().then(function() {
-        App.rootView.displayQuestion(App.QuestionView);
-      })
+      App.rootView.displayQuestion(App.QuestionView);
     }
   });
 })(App);
