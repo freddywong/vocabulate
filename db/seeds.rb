@@ -6,7 +6,7 @@ Answer.destroy_all
 Quiz.create(title: 'Japanese Core 1000', progress: 30)
 
 # Quiz 2:
-Quiz.create(title: 'Japanese Core 2000', progress: 9)
+Quiz.create(title: 'Japanese Core 2000', progress: 9) 
 
 # Quiz 1's questions:
 Question.create(word: '帰る', times_correct: 3, quiz_id: 1)
@@ -23,7 +23,7 @@ Question.create(word: 'ラーメン', times_correct: 5, quiz_id: 1)
 # Quiz 2's questions:
 Question.create(word: '再来年', times_correct: 3, quiz_id: 2)
 Question.create(word: '着せる', times_correct: 2, quiz_id: 2)
-Question.create(word: 'サラダ', times_correct: 5, quiz_id: 2)
+Question.create(word: 'サラダ', times_correct: 4, quiz_id: 2)
 Question.create(word: '代える', times_correct: 5, quiz_id: 2)
 Question.create(word: '四角', times_correct: 5, quiz_id: 2)
 Question.create(word: '急行', times_correct: 5, quiz_id: 2)

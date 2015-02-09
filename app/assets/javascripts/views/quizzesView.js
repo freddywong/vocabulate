@@ -10,9 +10,14 @@ var App = App || {};
     },
 
     render: function() {
+
+
+      var totalsForQuizzes = App.quizzesCollection.updateAllProgress();
+
       this.$el.html(
         HandlebarsTemplates['quizzes/index']({ quizzes: App.quizzesCollection.toJSON() })
       );
+      
       return this;
     },
 

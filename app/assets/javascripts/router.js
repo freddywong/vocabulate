@@ -7,7 +7,7 @@ var App = App || {};
     routes: {
       'quizzes':'quizzes',
       'quiz/:id': 'quiz',
-      'answer': 'answer'
+      'results/:id': 'results'
     },
 
     initialize: function() {
@@ -16,9 +16,11 @@ var App = App || {};
     },
 
     quizzes: function() {
-      App.quizzesCollection.fetch().then(function() {
-        App.rootView.displayQuizzes(App.QuizzesView);
-      })
+      App.questionsCollection.fetch().then(function() {
+        App.quizzesCollection.fetch().then(function() {
+          App.rootView.displayQuizzes(App.QuizzesView);
+        });
+      });
     },
 
     quiz: function(id) {  
@@ -29,12 +31,6 @@ var App = App || {};
         App.questionPool = App.questionsCollection.questionPool(questionSequence);
         App.rootView.displayQuestion(App.QuestionView);
       });
-    },
-
-    answer: function() {
-      App.answersCollection.fetch().then(function() {
-        App.rootView.displayContent(App.AnswerView);
-      })
     }
   });  
   App.router = new App.Router();
