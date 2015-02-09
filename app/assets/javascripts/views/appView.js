@@ -12,14 +12,19 @@ var App = App || {};
       return this;
     },
 
+    displayQuizzes: function(View) {
+      this.currentView = new View();
+      this.$el.find(".app-content").html(this.currentView.render().el);
+    },
+
     displayQuestion: function(View) {
       this.currentView = new View();
       this.$el.find(".app-content").html(this.currentView.render().el);
     },
 
-    displayAnswers: function(View, questionId) {
+    displayAnswers: function(View, questionId, quizId) {
       this.currentView = new View();
-      this.$el.find(".app-content").html(this.currentView.render(questionId).el);
+      this.$el.find(".app-content").html(this.currentView.render(questionId, quizId).el);
     },
 
     displayAnswer: function(View, questionId, answerId) {

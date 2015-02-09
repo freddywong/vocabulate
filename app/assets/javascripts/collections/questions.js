@@ -4,10 +4,17 @@ var App = App || {};
   App.Questions = Backbone.Collection.extend({
     url: "/api/questions",
     model: App.Question,
+    quizQuestions: function(quizId) {
+      var quizId = Number(quizId);
+      var quizQuestions = this.filter(function(question) {
+        return question.get('quiz_id') === quizId;
+      });
 
-    questionSequence: function() {
+      return new App.Questions(quizQuestions);
+    },    
 
-      var questionSequence = App.questionsCollection.sortBy(function(question) {
+    questionSequence: function(quizQuestions) {
+      var questionSequence = quizQuestions.sortBy(function(question) {
         return question.get("times_correct");
       });      
       return questionSequence;
@@ -24,8 +31,6 @@ var App = App || {};
         }
       });
 
-      console.log(actualQuestionPool)
-
       return actualQuestionPool;
     },
 
@@ -35,6 +40,7 @@ var App = App || {};
       
       return question;
     }
+
   });
 
   App.questionsCollection = new App.Questions();

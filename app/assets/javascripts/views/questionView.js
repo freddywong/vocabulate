@@ -6,7 +6,8 @@ var App = App || {};
   App.QuestionView = Backbone.View.extend({
 
     events: {
-      'click .list-answers': 'listAnswers'
+      'click .list-answers': 'listAnswers',
+      'click .list-quizzes': 'listQuizzes'
     },
     initialize: function() {
       App.questionsCollection.on("add", this.render, this);
@@ -15,7 +16,6 @@ var App = App || {};
     render: function() {
 
       var sequenceNumber = Number($(".app-content").attr("data-sequence"));
-      console.log(App.questionPool.length)
       var question = App.questionsCollection.question(App.questionPool, sequenceNumber);
       if ( sequenceNumber < App.questionPool.length ) {
         this.$el.html(
@@ -25,7 +25,6 @@ var App = App || {};
         sequenceNumber += 1;
         
         $(".app-content").attr("data-sequence", sequenceNumber);
-
 
       } else {
 
@@ -40,9 +39,14 @@ var App = App || {};
 
     listAnswers: function(event){
       var questionId = $(event.currentTarget).data("question");
+      var quizId = $(event.currentTarget).data("quiz");
       App.answersCollection.fetch().then(function() {
-        App.rootView.displayAnswers(App.AnswersView, questionId);  
+        App.rootView.displayAnswers(App.AnswersView, questionId, quizId);  
       })
+    }, 
+
+    listQuizzes: function() {
+      App.router.navigate("/quizzes", { trigger: true });
     }
   });
 })(App);
