@@ -10,12 +10,13 @@ var App = App || {};
       'results/:id': 'results'
     },
 
-    initialize: function() {
+    setContainer: function() {
       App.rootView = new App.AppView();
       $("#app-container").html(App.rootView.render().el);
     },
 
     quizzes: function() {
+      this.setContainer();
       App.questionsCollection.fetch().then(function() {
         App.quizzesCollection.fetch().then(function() {
           App.rootView.displayQuizzes(App.QuizzesView);
@@ -24,6 +25,7 @@ var App = App || {};
     },
 
     quiz: function(id) {  
+      this.setContainer();
       App.questionsCollection.fetch().then(function() {
         $(".app-content").attr("data-sequence", 0);
         var quizQuestions = App.questionsCollection.quizQuestions(id);
