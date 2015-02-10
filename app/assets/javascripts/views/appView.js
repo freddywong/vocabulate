@@ -12,7 +12,7 @@ var App = App || {};
       return this;
     },
 
-    displayQuizzes: function(View) {
+    displayUserQuizzes: function(View) {
       this.currentView = new View();
       this.$el.find(".app-content").html(this.currentView.render().el);
     },

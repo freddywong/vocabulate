@@ -1,12 +1,14 @@
 # == Schema Information
 #
-# Table name: languages
+# Table name: user_quizzes
 #
 #  id         :integer          not null, primary key
-#  title      :string
+#  quiz_id    :integer
+#  user_id    :integer
+#  progress   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Language < ActiveRecord::Base
+class UserQuiz < ActiveRecord::Base
 end

@@ -5,7 +5,7 @@ var App = App || {};
 (function(App) {
   App.Router = Backbone.Router.extend({
     routes: {
-      'quizzes':'quizzes',
+      'my_quizzes':'userQuizzes',
       'quiz/:id': 'quiz',
       'results/:id': 'results'
     },
@@ -15,11 +15,11 @@ var App = App || {};
       $("#app-container").html(App.rootView.render().el);
     },
 
-    quizzes: function() {
+    userQuizzes: function() {
       this.setContainer();
       App.questionsCollection.fetch().then(function() {
-        App.quizzesCollection.fetch().then(function() {
-          App.rootView.displayQuizzes(App.QuizzesView);
+        App.userQuizzesCollection.fetch().then(function() {
+          App.rootView.displayUserQuizzes(App.UserQuizzesView);
         });
       });
     },

@@ -1,0 +1,15 @@
+<h2>My Quizzes</h2>
+
+<table>
+  <tr>
+    <th>title</th>
+    <th>progress</th>
+  </tr>
+
+  {{#each quizzes}}
+  <tr class="start-quiz" data-quiz={{id}}>
+    <td>{{title}}</td>
+    <td class="progress">{{progress}}</td>
+  </tr> 
+  {{/each}}
+</table>
