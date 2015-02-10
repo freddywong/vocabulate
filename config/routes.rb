@@ -49,10 +49,13 @@ Rails.application.routes.draw do
   devise_for :users
   
   scope '/api' do
+    resources :quizzes
     resources :user_quizzes
     resources :questions
     resources :answers
+    get 'current_user_quizzes', to: "user_quizzes#get_current_users_quizzes"
   end
+
 
   root "pages#index"
 

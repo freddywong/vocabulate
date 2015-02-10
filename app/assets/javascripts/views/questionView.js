@@ -45,7 +45,7 @@ var App = App || {};
     }, 
 
     listQuizzes: function() {
-      App.router.navigate("/quizzes", { trigger: true });
+      App.router.navigate("/my_quizzes", { trigger: true });
     }
   });
 })(App);
