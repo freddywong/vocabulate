@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_action :authenticate_user!
   before_action :find_question, only:[ :update]
   def index
-    render json: Question.all
+    render json: Question.all.order(:id)
   end
 
   def update
