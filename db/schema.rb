@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210231457) do
+ActiveRecord::Schema.define(version: 20150211011400) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "sentence"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "question_id"
-    t.integer  "quiz_id"
+    t.integer  "user_quiz_id"
   end
 
   create_table "languages", force: :cascade do |t|
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20150210231457) do
     t.integer  "times_correct"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
-    t.integer  "quiz_id"
+    t.integer  "user_quiz_id"
   end
 
   create_table "quizzes", force: :cascade do |t|
