@@ -23,6 +23,7 @@ var App = App || {};
     },
 
     quizOverview: function(event) {
+      event.stopPropagation();
       var userQuizId = $(event.currentTarget).data("user-quiz");
       App.router.navigate("/quiz_overview/" + userQuizId, { trigger: true });      
     },
