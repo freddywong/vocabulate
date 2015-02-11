@@ -1,17 +1,27 @@
-<h2>Results</h2>
+<h2 class="results-title">Results</h2>
 
-<table>
-  <tr>
-    <th>Word</th>
-    <th>Progress</th>
-  </tr>
-  {{#each questions}}
-  <tr>
-    <td>{{attributes.word}}</td>
-    <td>{{attributes.times_correct}}</td>
-  </tr>
-  {{/each}} 
+<div class="results-body">
+  <div class="results-words">
+    <h3>Words</h3>  
+    {{#each questions}}
+      <div>{{word}}</div>
+    {{/each}}  
+  </div>
 
-</table>
+  <div class="results-progress">
+    <h3>Progress</h3>
+    {{#each questions}}  
+      <div>{{times_correct}}</div>
+    {{/each}}   
+  </div>
 
-<button class="list-quizzes">Next</button>
+  <div class="results-meanings">
+    <h3>Meanings</h3>
+    {{#each answers}}
+      <div>{{sentence}}</div>
+    {{/each}} 
+  </div>
+  <button class="list-quizzes results-next">Next</button>
+</div>
+
+

@@ -27,8 +27,9 @@ var App = App || {};
         $(".app-content").attr("data-sequence", sequenceNumber);
 
       } else {
+
         this.$el.html(
-          HandlebarsTemplates['questions/results']({ questions: App.questionPool })
+          HandlebarsTemplates['questions/results']({ questions: App.quizQuestions.toJSON(), answers: App.quizAnswers.toJSON() })
         );  
       }
 

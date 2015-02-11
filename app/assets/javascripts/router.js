@@ -36,11 +36,16 @@ var App = App || {};
     quiz: function(userQuizId) {  
       this.setContainer();
       App.questionsCollection.fetch().then(function() {
-        $(".app-content").attr("data-sequence", 0);
-        var quizQuestions = App.questionsCollection.quizQuestions(userQuizId);
-        var questionSequence = App.questionsCollection.questionSequence(quizQuestions);  
-        App.questionPool = App.questionsCollection.questionPool(questionSequence);
-        App.rootView.displayQuestion(App.QuestionView);
+        App.answersCollection.fetch().then(function() {
+          $(".app-content").attr("data-sequence", 0);
+
+          App.quizQuestions = App.questionsCollection.quizQuestions(userQuizId);
+          var questionSequence = App.questionsCollection.questionSequence(App.quizQuestions);  
+          App.questionPool = App.questionsCollection.questionPool(questionSequence);
+
+          App.quizAnswers = App.answersCollection.userQuizAnswers(userQuizId);
+          App.rootView.displayQuestion(App.QuestionView);
+        });
       });
     }
   });  
