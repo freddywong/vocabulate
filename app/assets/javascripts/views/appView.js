@@ -17,6 +17,11 @@ var App = App || {};
       this.$el.find(".app-content").html(this.currentView.render().el);
     },
 
+    displayUserQuizOverview: function(View, userQuizId) {
+      this.currentView = new View();
+      this.$el.find(".app-content").html(this.currentView.render(userQuizId).el);
+    },
+
     displayQuestion: function(View) {
       this.currentView = new View();
       this.$el.find(".app-content").html(this.currentView.render().el);

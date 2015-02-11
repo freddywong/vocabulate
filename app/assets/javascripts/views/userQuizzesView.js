@@ -6,7 +6,8 @@ var App = App || {};
   App.UserQuizzesView = Backbone.View.extend({
 
     events: {
-      'click .start-quiz': 'startQuiz'
+      'click .start-quiz': 'startQuiz',
+      'click .quiz-overview': 'quizOverview'
     },
 
     render: function() {
@@ -18,6 +19,11 @@ var App = App || {};
       );
 
       return this;
+    },
+
+    quizOverview: function(event) {
+      var userQuizId = $(event.currentTarget).data("user-quiz");
+      App.router.navigate("/quiz_overview/" + userQuizId, { trigger: true });      
     },
 
     startQuiz: function(event) {
