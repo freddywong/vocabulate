@@ -13,10 +13,13 @@ var App = App || {};
     },
 
     render: function(questionId, answerId) {
-      var answer = App.answersCollection.get(answerId).toJSON();
+      
+      var question = App.questionsCollection.get(questionId);
 
       if (questionId === answerId) {
-        var timesCorrect = App.questionsCollection.get(questionId).get("times_correct");
+      var answer = App.answersCollection.get(answerId).toJSON();  
+
+        var timesCorrect = question.get("times_correct");
         
         if (timesCorrect < 5) {
           timesCorrect += 1;  
@@ -24,11 +27,14 @@ var App = App || {};
         
         App.questionsCollection.get(questionId).save({ times_correct: timesCorrect })
         this.$el.html(
-          HandlebarsTemplates['answers/correct']({ answer: answer })
+          HandlebarsTemplates['answers/correct']({ answer: answer, question: question.toJSON() })
         );
       } else {
+
+        var answer = App.answersCollection.findWhere({ question_id: questionId})
+
         this.$el.html(
-          HandlebarsTemplates['answers/incorrect']({ answer: answer })
+          HandlebarsTemplates['answers/incorrect']({ answer: answer.toJSON() , question: question.toJSON() })
         );
       }
       return this;
