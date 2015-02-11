@@ -9,8 +9,7 @@ var App = App || {};
         var totalForQuiz = App.questionsCollection.quizQuestions(quiz.get('quiz_id')).reduce(function(sum, question) {
           return sum + question.get('times_correct');
         }, 0);
-        App.userQuizzesCollection.get(quiz.get('quiz_id')).save({ progress: totalForQuiz });
-        console.log(quiz.get('title') + "'s total score: " + totalForQuiz)
+        App.userQuizzesCollection.get(quiz.get('id')).save({ progress: totalForQuiz });
       });
       
     }

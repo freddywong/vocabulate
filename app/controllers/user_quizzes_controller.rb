@@ -3,7 +3,6 @@ class UserQuizzesController < ApplicationController
   before_action :find_user_quiz, only: [:update]
 
   def index
-    @user_quizzes = UserQuiz.all
     @current_user_quizzes = UserQuiz.where(user_id: current_user.id)
     render json: @current_user_quizzes
   end

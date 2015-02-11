@@ -20,7 +20,7 @@ var App = App || {};
       App.questionsCollection.fetch().then(function() {
         App.userQuizzesCollection.fetch().then(function() {
           App.rootView.displayUserQuizzes(App.UserQuizzesView);
-        });
+        }); 
       });
     },
 

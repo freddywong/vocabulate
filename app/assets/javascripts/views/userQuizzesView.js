@@ -16,7 +16,7 @@ var App = App || {};
       this.$el.html(
         HandlebarsTemplates['user_quizzes/index']({ quizzes: App.userQuizzesCollection.toJSON() })
       );
-      
+
       return this;
     },
 

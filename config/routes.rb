@@ -53,7 +53,6 @@ Rails.application.routes.draw do
     resources :user_quizzes
     resources :questions
     resources :answers
-    get 'current_user_quizzes', to: "user_quizzes#get_current_users_quizzes"
   end
 
 

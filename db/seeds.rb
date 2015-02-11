@@ -23,15 +23,7 @@ quiz_two = Quiz.create(title: 'Japanese Core 2000')
 
 UserQuiz.create(title: quiz_one.title, progress: 30, quiz_id: quiz_one.id, user_id: user_one.id)
 UserQuiz.create(title: quiz_two.title, progress: 9, quiz_id: quiz_two.id, user_id: user_one.id)
-
-# user_one.user_quizzes << user_quiz_one
-# user_two.user_quizzes << user_quiz_one
-
-# # UserQuiz 1:
-# user_one.user_quizzes.create(progress: 30, quiz_id: quiz_one.id)
-
-# # UserQuiz 2:
-# user_one.user_quizzes.create(progress: 9, quiz_id: quiz_two.id) 
+UserQuiz.create(title: quiz_two.title, progress: 30, quiz_id: quiz_two.id, user_id: user_two.id)
 
 # Quiz 1's questions:
 question_one = quiz_one.questions.create(word: '帰る', times_correct: 3)
