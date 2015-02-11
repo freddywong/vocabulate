@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.results-title {
-  float:left;
+.results-body {
+  float: left;
 }
 
 .results-words {
@@ -18,12 +18,12 @@
   float: left;
 }
 
-.results-body {
-
-
-}
-
 .results-next {
   clear:both;
 }
+
+.clear {
+  clear: both;
+}
+
 
