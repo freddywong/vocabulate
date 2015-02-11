@@ -22,9 +22,9 @@ var App = App || {};
       this.$el.find(".app-content").html(this.currentView.render().el);
     },
 
-    displayAnswers: function(View, questionId, quizId) {
+    displayAnswers: function(View, questionId, userQuizId) {
       this.currentView = new View();
-      this.$el.find(".app-content").html(this.currentView.render(questionId, quizId).el);
+      this.$el.find(".app-content").html(this.currentView.render(questionId, userQuizId).el);
     },
 
     displayAnswer: function(View, questionId, answerId) {

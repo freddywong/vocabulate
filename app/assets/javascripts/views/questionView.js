@@ -38,9 +38,9 @@ var App = App || {};
 
     listAnswers: function(event){
       var questionId = $(event.currentTarget).data("question");
-      var quizId = $(event.currentTarget).data("quiz");
+      var userQuizId = $(event.currentTarget).data("user-quiz");
       App.answersCollection.fetch().then(function() {
-        App.rootView.displayAnswers(App.AnswersView, questionId, quizId);  
+        App.rootView.displayAnswers(App.AnswersView, questionId, userQuizId);  
       })
     }, 
 

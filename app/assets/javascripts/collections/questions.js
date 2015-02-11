@@ -4,10 +4,10 @@ var App = App || {};
   App.Questions = Backbone.Collection.extend({
     url: "/api/questions",
     model: App.Question,
-    quizQuestions: function(quizId) {
-      var quizId = Number(quizId);
+    quizQuestions: function(userQuizId) {
+      var userQuizId = Number(userQuizId);
       var quizQuestions = this.filter(function(question) {
-        return question.get('quiz_id') === quizId;
+        return question.get('user_quiz_id') === userQuizId;
       });
 
       return new App.Questions(quizQuestions);

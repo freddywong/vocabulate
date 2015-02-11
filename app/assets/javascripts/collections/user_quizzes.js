@@ -6,7 +6,7 @@ var App = App || {};
     model: App.UserQuiz,
     updateAllProgress: function(){
       this.each(function(quiz) {
-        var totalForQuiz = App.questionsCollection.quizQuestions(quiz.get('quiz_id')).reduce(function(sum, question) {
+        var totalForQuiz = App.questionsCollection.quizQuestions(quiz.get('id')).reduce(function(sum, question) {
           return sum + question.get('times_correct');
         }, 0);
         App.userQuizzesCollection.get(quiz.get('id')).save({ progress: totalForQuiz });

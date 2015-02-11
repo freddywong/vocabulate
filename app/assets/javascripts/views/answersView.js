@@ -8,12 +8,12 @@ var App = App || {};
       'click .answer': 'showAnswer'
     },
 
-    render: function(questionId, quizId) {
+    render: function(questionId, userQuizId) {
       var question = App.questionsCollection.get(questionId);
-      var quizAnswers = App.answersCollection.quizAnswers(quizId);
+      var userQuizAnswers = App.answersCollection.userQuizAnswers(userQuizId);
 
       this.$el.html(
-        HandlebarsTemplates['answers/index']({ answers: quizAnswers.toJSON(), question: question.toJSON() })
+        HandlebarsTemplates['answers/index']({ answers: userQuizAnswers.toJSON(), question: question.toJSON() })
       );
 
       this.$el.find(".answer").attr("data-question", questionId );

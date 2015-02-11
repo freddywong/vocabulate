@@ -21,8 +21,8 @@ var App = App || {};
     },
 
     startQuiz: function(event) {
-      var quizId = $(event.currentTarget).data("quiz");
-      App.router.navigate("/quiz/" + quizId, { trigger: true });
+      var userQuizId = $(event.currentTarget).data("user-quiz");
+      App.router.navigate("/quiz/" + userQuizId, { trigger: true });
     }
   });
 })(App);
