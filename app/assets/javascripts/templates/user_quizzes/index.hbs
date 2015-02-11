@@ -1,17 +1,21 @@
 <h2>My Quizzes</h2>
 
-<table>
-  <tr>
-    <th>title</th>
-    <th>progress</th>
-  </tr>
 
-  {{#each quizzes}}
-  <tr class="start-quiz" data-user-quiz={{id}}>
-    <td>{{title}}</td>
-    <td class="progress">{{progress}}</td>
-  </tr> 
-  <button class="quiz-overview" data-user-quiz={{id}}>Overview</button>
+{{#each quizzes}}
+<div class="user-quiz" data-user-quiz={{id}}>  
+  <div class="start-quiz" data-user-quiz={{id}}>
+    <h3>{{title}}</h3>
+    <h3 class="progress-amount" data-user-quiz={{id}}>{{progress}}</h3> 
+    <button class="quiz-overview" data-user-quiz={{id}}>Overview</button>
+
+    <div class="col-xs-12 col-sm-12 progress-container">
+      <div class="progress progress-striped active">
+        <div class="progress-bar progress-bar-success" aria-valuemax="50" style="width:0%">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   {{/each}}
-</table>
 

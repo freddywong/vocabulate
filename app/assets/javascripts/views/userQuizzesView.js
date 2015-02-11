@@ -18,6 +18,7 @@ var App = App || {};
         HandlebarsTemplates['user_quizzes/index']({ quizzes: App.userQuizzesCollection.toJSON() })
       );
 
+
       return this;
     },
 
@@ -32,3 +33,4 @@ var App = App || {};
     }
   });
 })(App);
+

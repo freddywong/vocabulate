@@ -26,16 +26,16 @@ user_quiz_two = UserQuiz.create(title: quiz_two.title, progress: 9, quiz_id: qui
 user_quiz_three = UserQuiz.create(title: quiz_two.title, progress: 30, quiz_id: quiz_two.id, user_id: user_two.id)
 
 # User Quiz 1's questions:
-question_one = user_quiz_one.questions.create(word: '帰る', times_correct: 3)
+question_one = user_quiz_one.questions.create(word: '帰る', times_correct: 2)
 question_two = user_quiz_one.questions.create(word: '引き出し', times_correct: 2)
-question_three = user_quiz_one.questions.create(word: '昨日', times_correct: 5)
-question_four = user_quiz_one.questions.create(word: '職業', times_correct: 5)
-question_five = user_quiz_one.questions.create(word: '家内', times_correct: 5)
-question_six = user_quiz_one.questions.create(word: '冗談', times_correct: 5)
-question_seven = user_quiz_one.questions.create(word: 'クーラー', times_correct: 5)
-question_eight = user_quiz_one.questions.create(word: '不便', times_correct: 5)
-question_nine = user_quiz_one.questions.create(word: '昼休み', times_correct: 5)
-question_ten = user_quiz_one.questions.create(word: 'ラーメン', times_correct: 5)
+question_three = user_quiz_one.questions.create(word: '昨日', times_correct: 1)
+question_four = user_quiz_one.questions.create(word: '職業', times_correct: 3)
+question_five = user_quiz_one.questions.create(word: '家内', times_correct: 4)
+question_six = user_quiz_one.questions.create(word: '冗談', times_correct: 3)
+question_seven = user_quiz_one.questions.create(word: 'クーラー', times_correct: 1)
+question_eight = user_quiz_one.questions.create(word: '不便', times_correct: 0)
+question_nine = user_quiz_one.questions.create(word: '昼休み', times_correct: 0)
+question_ten = user_quiz_one.questions.create(word: 'ラーメン', times_correct: 2)
 
 # User Quiz 2's questions:
 question_eleven = user_quiz_two.questions.create(word: '再来年', times_correct: 3)

@@ -15,6 +15,33 @@ var App = App || {};
     displayUserQuizzes: function(View) {
       this.currentView = new View();
       this.$el.find(".app-content").html(this.currentView.render().el);
+      
+      var progressBarCounter = 0;
+      
+      this.$el.find(".user-quiz").each(function(){
+
+      var progressAmount = (2 * $(this).find(".progress-amount").html());
+
+      $(this).find(".progress-bar").animate({
+          width: progressAmount + "%"
+        }, 2500);
+
+      
+      var percent_number_step = $.animateNumber.numberStepFactories.append(' %')
+      $(this).find(".progress-bar").animateNumber(
+        {
+          number: progressAmount,
+          color: 'orange',
+          'font-size': '30px',
+
+          easing: 'easeInQuad',
+
+          numberStep: percent_number_step
+        },
+        2500
+      );
+
+    });
     },
 
     displayUserQuizOverview: function(View, userQuizId) {

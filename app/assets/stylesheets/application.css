@@ -18,3 +18,8 @@
 button, input, optgroup, select, textarea {
   color: black;
 }
+
+.progress.active .progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
