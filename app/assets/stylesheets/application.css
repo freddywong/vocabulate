@@ -53,6 +53,13 @@ body {
   
 }
 
+.results-container {
+  background-color:#fff;
+  border-radius: 10px;
+  color: #333;
+  
+}
+
 .question-container {
   background-color:#fff;
   border-radius: 10px;
@@ -84,6 +91,10 @@ body {
 }
 
 .app-title {
+  text-align: left;
+}
+
+.results-title {
   text-align: left;
 }
 
@@ -313,4 +324,15 @@ body {
   background-color: #ce7000;
 }
 
+#progress-bar-results-container {
 
+}
+
+#progress-bar-results {
+  font-size: 1em;
+}
+
+#progress-container {
+  height: 30px;
+
+}

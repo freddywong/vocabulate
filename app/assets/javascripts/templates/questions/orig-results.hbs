@@ -1,0 +1,34 @@
+<h2 class="results-title">SesResults</h2>
+
+<div class="results-body">
+  <div class="results-words">
+    <h3>Words</h3>  
+    {{#each questions}}
+      <div>{{word}}</div>
+    {{/each}}  
+  </div>
+  
+  <h3>Progress</h3>
+  {{#each questions}} 
+  <div class="results-progress">
+    <div class="times-correct-amount" data-times-correct="{{times_correct}}"></div>
+    <div class="col-xs-12 col-sm-12 progress-container">
+      <div class="progress progress-striped active">
+        <div class="progress-bar progress-bar-success" aria-valuemax="50" style="width:0%">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}} 
+
+  <div class="results-meanings">
+    <h3>Meanings</h3>
+    {{#each answers}}
+      <div>{{sentence}}</div>
+    {{/each}} 
+  </div>
+</div>
+<div></div>
+<div class="clear"></div>
+<button class="list-quizzes results-next">Next</button>
