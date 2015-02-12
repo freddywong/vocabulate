@@ -28,6 +28,19 @@
   transition: none !important;
 }
 
+.progress-container {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.progress {
+  height: 50px;
+}
+
+.progress-bar {
+  padding-top:15px;
+}
+
 body {
   background-color:#848484;
 
@@ -38,6 +51,10 @@ body {
   border-radius: 10px;
   color: #333;
   
+}
+
+.view-middle-container {
+  text-align: left;
 }
 
 .app-title {
@@ -52,11 +69,54 @@ body {
 
 
 .user-quiz {
-  margin: 0px 0px 30px 0px;
+  margin: 10px 0px 30px 0px;
   overflow: hidden;
 }
 
+.quiz-picture {
+  margin-top:15px;
+  width: 75%;
+  height: auto;
+  border-radius: 15px;
+}
+.japan-icon {
+  width: 25%;
+  height: auto;
+}
 .quiz-title {
 
+}
+
+.start-quiz {
+  margin-top: 15px;
+  background-color: #FF8B00;
+  background-repeat:no-repeat;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  color: #fff;
+  margin-bottom: 20px; 
+}
+.start-quiz:hover {
+  background-color: #ce7000;
+}
+
+.quiz-overview {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: 3px solid #FF8B00;
+  border-radius: 5px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 1.5em;
+  padding: 5px 10px; 
+}
+.quiz-overview:hover {
+  color: #FF8B00;
 }
 

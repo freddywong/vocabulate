@@ -15,15 +15,15 @@ user_two = User.create(
   )
 
 # Quiz 1:
-quiz_one = Quiz.create(title: 'Japanese Core 1000')
+quiz_one = Quiz.create(title: 'Japanese Core 1000', picture_url: 'https://s3-ap-southeast-2.amazonaws.com/vocabulate/geisha.jpeg')
 
 # Quiz 2:
-quiz_two = Quiz.create(title: 'Japanese Core 2000')
+quiz_two = Quiz.create(title: 'Japanese Core 2000', picture_url: 'https://s3-ap-southeast-2.amazonaws.com/vocabulate/fuji.jpg')
 
 
-user_quiz_one = UserQuiz.create(title: quiz_one.title, progress: 30, quiz_id: quiz_one.id, user_id: user_one.id)
-user_quiz_two = UserQuiz.create(title: quiz_two.title, progress: 9, quiz_id: quiz_two.id, user_id: user_one.id)
-user_quiz_three = UserQuiz.create(title: quiz_two.title, progress: 30, quiz_id: quiz_two.id, user_id: user_two.id)
+user_quiz_one = UserQuiz.create(title: quiz_one.title, progress: 30, quiz_id: quiz_one.id, user_id: user_one.id, picture_url: quiz_one.picture_url)
+user_quiz_two = UserQuiz.create(title: quiz_two.title, progress: 9, quiz_id: quiz_two.id, user_id: user_one.id, picture_url: quiz_two.picture_url)
+user_quiz_three = UserQuiz.create(title: quiz_two.title, progress: 30, quiz_id: quiz_two.id, user_id: user_two.id, picture_url: quiz_two.picture_url)
 
 # User Quiz 1's questions:
 question_one = user_quiz_one.questions.create(word: '帰る', times_correct: 2)
