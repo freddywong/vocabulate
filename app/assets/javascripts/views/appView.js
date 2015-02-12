@@ -18,7 +18,7 @@ var App = App || {};
       
       this.$el.find(".user-quiz").each(function(){
 
-      var progressAmount = (2 * $(this).find(".progress-amount").html());
+      var progressAmount = (2 * $(this).find(".progress-amount").attr("data-progress"));
 
       $(this).find(".progress-bar").animate({
           width: progressAmount + "%"
@@ -53,7 +53,7 @@ var App = App || {};
       
       this.$el.find(".results-progress").each(function(){
 
-        var progressAmount = (20 * $(this).find(".times-correct-amount").html());
+        var progressAmount = (20 * $(this).find(".times-correct-amount").attr("data-times-correct"));
 
         $(this).find(".progress-bar").animate({
             width: progressAmount + "%"

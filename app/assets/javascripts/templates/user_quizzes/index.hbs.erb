@@ -1,0 +1,37 @@
+<div class="col-md-2"></div>
+
+<div class="view-container col-md-8">
+  <div class="app-title">
+    <h2>My Quizzes</h2>
+  </div>
+  <div class="line-separator"></div>
+  {{#each quizzes}}
+  <div class="user-quiz" data-user-quiz={{id}}>  
+    <div class="start-quiz" data-user-quiz={{id}}>
+      <div class="view-left-container col-md-8">
+        <h3 class="quiz-title">{{title}}</h3>
+
+        <div class="progress-amount" data-progress={{progress}} data-user-quiz={{id}}></div>     
+
+        <div class="progress-container">
+          <div class="progress progress-striped active">
+            <div class="progress-bar progress-bar-success" aria-valuemax="50" style="width:0%">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view-middle-container col-md-2">
+        <%= image_tag('geisha.jpeg') %>
+      </div>
+      <div class="view-right-container col-md-2">
+        <button class="quiz-overview" data-user-quiz={{id}}>Overview</button>
+      </div>
+    </div>
+  </div>
+    <div class="line-separator"></div>
+  {{/each}}
+
+</div>
+
+<div class="col-md-2"></div>

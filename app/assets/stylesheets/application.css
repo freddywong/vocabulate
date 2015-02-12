@@ -15,11 +15,48 @@
  *= require_self
  */
 
-button, input, optgroup, select, textarea {
+/*
+ * Globals
+ */
+
+ button, input, optgroup, select, textarea {
   color: black;
 }
 
 .progress.active .progress-bar {
-    -webkit-transition: none !important;
-    transition: none !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
+
+body {
+  background-color:#848484;
+
+}
+
+.view-container {
+  background-color:#fff;
+  border-radius: 10px;
+  color: #333;
+  
+}
+
+.app-title {
+  text-align: left;
+}
+
+.line-separator{
+  height:1px;
+  background-color:#F1F1F1;
+  border-bottom:1px solid #D8D8D8;
+}
+
+
+.user-quiz {
+  margin: 0px 0px 30px 0px;
+  overflow: hidden;
+}
+
+.quiz-title {
+
+}
+
