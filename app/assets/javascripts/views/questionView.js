@@ -27,11 +27,11 @@ var App = App || {};
         $(".app-content").attr("data-sequence", sequenceNumber);
 
       } else {
-        $.extend(App.questionsCollection.toJSON(), App.answersCollection.toJSON())
 
         this.$el.html(
           HandlebarsTemplates['questions/results']({ questions: App.quizQuestions.toJSON(), answers: App.quizAnswers.toJSON() })
-        );  
+        ); 
+        
       }
 
       return this;

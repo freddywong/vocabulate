@@ -1,38 +1,32 @@
-<div class="col-md-2"></div>
+<div class="col-md-3"></div>
 
-<div class="results-container col-md-8">
+<div class="results-container col-md-6">
   <div class="results-title">
     <h2>Session Results</h2>
   </div>
   <div class="line-separator"></div>
-  
 
-    {{#each questions}}
-      <div class="results-word col-md-4">
-        {{word}}
-      </div>
-    {{/each}}
-    {{#each answers}}
-      <div class="results-meaning col-md-4">
-        {{sentence}}
-      </div>
-    {{/each}} 
 
-    {{#each questions}}
-      <div class="results-progress col-md-4">
-        <div class="times-correct-amount" data-times-correct="{{times_correct}}"></div>
-        <div id="progress-bar-results-container" class="progress-container">
-          <div id="progress-container" class="progress progress-striped active">
-            <div id="progress-bar-results" class="progress-bar progress-bar-success" style="width:0%">
+  {{#each questions}}
+  <div class="results-progress col-md-3">
+    <p class="results-word">{{word}}</p>
+    <div class="times-correct-amount" data-times-correct="{{times_correct}}"></div>
+    <div class="results-progress-container progress-container">
+      <div class="progress progress-striped active">
+        <div class="results-progress-bar progress-bar progress-bar-success" style="width:0%">
 
-            </div>
-          </div>
         </div>
       </div>
-    {{/each}}
-    <button class="list-quizzes results-next col-md-12">Next</button>
+    </div>
+  </div>
 
+
+  {{/each}}
+  <button class="list-quizzes results-next col-md-3">Next</button>
 </div>
+<div class="col-md-3"></div>
 
-<div class="col-md-2"></div>
+
+
+
 

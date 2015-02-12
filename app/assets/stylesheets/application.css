@@ -23,21 +23,21 @@
   color: black;
 }
 
-.progress.active .progress-bar {
+.progress.active .progress-bar .results-progress-bar {
   -webkit-transition: none !important;
   transition: none !important;
 }
 
-.progress-container {
+.quiz-progress-container {
   padding-left: 30px;
   padding-top: 20px;
 }
 
-.progress {
+.quiz-progress {
   height: 50px;
 }
 
-.progress-bar {
+.quiz-progress-bar {
   padding-top:15px;
 }
 
@@ -57,6 +57,7 @@ body {
   background-color:#fff;
   border-radius: 10px;
   color: #333;
+  overflow:hidden;
   
 }
 
@@ -324,15 +325,38 @@ body {
   background-color: #ce7000;
 }
 
-#progress-bar-results-container {
-
+.results-word {
+  margin-top: 10px;
+  font-size: 1.5em;
 }
 
-#progress-bar-results {
-  font-size: 1em;
+.results-progress-container {
+  margin-top:10px;
 }
 
-#progress-container {
-  height: 30px;
-
+.results-progress-bar {
+  height:20px;
+  padding-bottom:20px;
 }
+
+.results-next {
+  margin-left: 500px;
+  margin-bottom: 30px;
+  background-color: #FF8B00;
+  background-repeat:no-repeat;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  color: #fff; 
+}
+
+.results-next:hover {
+  background-color: #ce7000;
+}
+
+
+

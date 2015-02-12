@@ -65,7 +65,7 @@ var App = App || {};
           {
             number: progressAmount,
             color: 'orange',
-            'font-size': '30px',
+            'font-size': '20px',
 
             easing: 'easeInQuad',
 
