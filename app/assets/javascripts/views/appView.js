@@ -16,8 +16,6 @@ var App = App || {};
       this.currentView = new View();
       this.$el.find(".app-content").html(this.currentView.render().el);
       
-      var progressBarCounter = 0;
-      
       this.$el.find(".user-quiz").each(function(){
 
       var progressAmount = (2 * $(this).find(".progress-amount").html());
@@ -52,6 +50,31 @@ var App = App || {};
     displayQuestion: function(View) {
       this.currentView = new View();
       this.$el.find(".app-content").html(this.currentView.render().el);
+      
+      this.$el.find(".results-progress").each(function(){
+
+        var progressAmount = (20 * $(this).find(".times-correct-amount").html());
+
+        $(this).find(".progress-bar").animate({
+            width: progressAmount + "%"
+          }, 2500);
+
+        
+        var percent_number_step = $.animateNumber.numberStepFactories.append(' %')
+        $(this).find(".progress-bar").animateNumber(
+          {
+            number: progressAmount,
+            color: 'orange',
+            'font-size': '30px',
+
+            easing: 'easeInQuad',
+
+            numberStep: percent_number_step
+          },
+          2500
+        );
+
+      });
     },
 
     displayAnswers: function(View, questionId, userQuizId) {

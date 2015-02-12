@@ -7,13 +7,20 @@
       <div>{{word}}</div>
     {{/each}}  
   </div>
-
+  
+  <h3>Progress</h3>
+  {{#each questions}} 
   <div class="results-progress">
-    <h3>Progress</h3>
-    {{#each questions}}  
-      <div>{{times_correct}}</div>
-    {{/each}}   
+    <div class="times-correct-amount">{{times_correct}}</div>
+    <div class="col-xs-12 col-sm-12 progress-container">
+      <div class="progress progress-striped active">
+        <div class="progress-bar progress-bar-success" aria-valuemax="50" style="width:0%">
+
+        </div>
+      </div>
+    </div>
   </div>
+  {{/each}} 
 
   <div class="results-meanings">
     <h3>Meanings</h3>
