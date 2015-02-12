@@ -1,16 +1,19 @@
-<h2>Answers</h2>
+<div class="col-md-2"></div>
 
-<table>
-  <tr>
-    <th>Word</th>
-    <th>Meaning</th>
-  </tr>
-  <tr>
-    <td>{{question.word}}</td>
-    <td>{{answer.sentence}}</td>
-  </tr> 
-</table>
+<div class="answer-correct-container col-md-8">
+  <div class="col-md-3"></div>
 
-<h3>Correct</h3>
+  
+  <div class="answer-correct-content col-md-6">
+    <p class="correct">Correct!</p>
+    <div><img class="correct-tick" src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/tick.png"></div>
+    <span class="current-correct-question">{{question.word}}</span>
+    <div class="line-separator"></div>
+    <span class="current-correct-answer">{{answer.sentence}}</span>
+  </div>
+ 
+  <button class="show-question col-md-3">Next</button>
 
-<button class="show-question">Next</button>
+</div>
+  
+<div class="col-md-2"></div>  
