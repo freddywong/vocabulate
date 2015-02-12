@@ -1,14 +1,8 @@
-<h2>Answers</h2>
+<div class="col-md-2"></div>
 
-<table>
-  <tr>
-    <th>Sentence</th>
-  </tr>
-
-  {{#each answers}}
-  <tr class="answer" data-answer={{id}} data-question="">
-    <td>{{sentence}}</td>
-  </tr> 
-  {{/each}}
-</table>
-
+<div class="answers-container col-md-8">
+    {{#each answers}}
+      <button class="answer col-md-5" data-answer={{id}} data-question="">{{sentence}}</button>  
+    {{/each}}
+</div>
+<div class="col-md-2"></div>  
