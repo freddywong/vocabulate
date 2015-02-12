@@ -65,6 +65,12 @@ body {
   color: #333;
 }
 
+.answer-incorrect-container {
+  background-color:#fff;
+  border-radius: 10px;
+  color: #333;
+}
+
 .answers-container {
   background-color:#fff;
   border-radius: 10px;
@@ -218,10 +224,18 @@ body {
   font-size: 4em;
 }
 
+.current-incorrect-question {
+  color:#FF8B00;
+  font-size: 4em;
+}
+
 .current-correct-answer {
   font-size: 3em;
 }
 
+.current-incorrect-answer {
+  font-size: 3em;
+}
 .question-mark {
   font-size: 5em;
 }
@@ -233,6 +247,12 @@ body {
 }
 
 .correct {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #848484;
+}
+
+.incorrect {
   margin-top: 40px;
   margin-bottom: 20px;
   color: #848484;
@@ -253,10 +273,44 @@ body {
   color: #FF8B00;
 }
 
+.answer-incorrect-content {
+  padding-bottom: 120px;
+  color: #FF8B00;
+}
+
 .correct-tick {
   margin-bottom:40px;
   width:80px;
   height: auto;
+}
+
+.incorrect-tick {
+  margin-bottom:40px;
+  width:80px;
+  height: auto;
+}
+
+.extra-answer-sentence {
+  font-size: 1.5em;
+  color: #848484;
+}
+
+#show-question-v2 {
+  margin-top: 420px;
+  background-color: #FF8B00;
+  background-repeat:no-repeat;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  color: #fff; 
+}
+
+#show-question-v2:hover {
+  background-color: #ce7000;
 }
 
 
