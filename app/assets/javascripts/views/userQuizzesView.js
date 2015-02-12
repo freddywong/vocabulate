@@ -13,7 +13,7 @@ var App = App || {};
     render: function() {
 
       var totalsForQuizzes = App.userQuizzesCollection.updateAllProgress();
-
+      
       this.$el.html(
         HandlebarsTemplates['user_quizzes/index']({ quizzes: App.userQuizzesCollection.toJSON() })
       );

@@ -4,16 +4,15 @@
   <title>Vocabulate</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <%= favicon_link_tag 'https://s3-ap-southeast-2.amazonaws.com/vocabulate/speech-bubble.ico' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<% if notice %>
-  <p class="notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert"><%= alert %></p>
-<% end %>
+
+  <body>
+
+
+
 
 <%= yield %>
 

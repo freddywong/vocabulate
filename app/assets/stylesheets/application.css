@@ -19,6 +19,15 @@
  * Globals
  */
 
+body {
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.cover-heading {
+  font-size: 4em;
+}
+
  button, input, optgroup, select, textarea {
   color: black;
 }
@@ -358,5 +367,49 @@ body {
   background-color: #ce7000;
 }
 
+.mastfoot {
+  padding-bottom:20px;
+}
 
+.personal-website {
+  text-align:center;
+  margin-top: 30px;
+}
 
+.social-media > a > img {
+  width:40px;
+  padding-left:5px;
+
+}
+
+#freddy-site-link {
+  color:#FF8B00;
+}
+
+.masthead-brand {
+  color:#FF8B00;
+}
+
+.vocabulate-logo {
+  margin-top: -25px;
+  width:30px;
+  height: auto;
+}
+
+.lets-start {
+  margin-top: 50px;
+  background-color: #FF8B00;
+  background-repeat:no-repeat;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 1.5em;
+  padding: 10px 15px;
+  color: #fff;
+  margin-bottom: 20px; 
+}
+.lets-start:hover {
+  background-color: #ce7000;
+}

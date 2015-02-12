@@ -6,38 +6,51 @@
 
       <div class="masthead clearfix">
         <div class="inner">
-          <h3 class="masthead-brand">Cover</h3>
+          <% if user_signed_in? %>
+            <a href="/my_quizzes"><h3 class="masthead-brand">Vocabulate.me <img class="vocabulate-logo" src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/speech-bubble.png"></h3></a>
+          <% else %>
+            <a href="/"><h3 class="masthead-brand">Vocabulate.me <img class="vocabulate-logo" src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/speech-bubble.png"></h3></a>
+          <% end %>  
           <nav>
             <ul class="nav masthead-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Contact</a></li>
               <% if user_signed_in? %>
-               <li><%= link_to current_user.email, edit_user_registration_path(@user) %></li>
-               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-             <% else %>
-               <li><%= link_to "Log In", new_user_session_path %></li>
-               <li><%= link_to "Sign Up", new_user_registration_path %></li>
-             <% end %>
+              <li><%= link_to current_user.email, edit_user_registration_path(@user) %></li>
+              <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+              <li><%= link_to "Log In", new_user_session_path %></li>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <% end %>
             </ul>
           </nav>
         </div>
       </div>
     </div>
 
-      <div id="app-container" class="inner cover">
-        <h1 class="cover-heading">Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-default">Learn more</a>
-        </p>
-      </div>
-
-      <div class="mastfoot">
-        <div class="inner">
-          <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-        </div>
-      </div>
+    <div id="app-container" class="inner cover">
+      <h1 class="cover-heading">Smart, Dynamic and Personal</h1>
+      <p class="lead">Remember better and faster with tailored vocabulary lessons</p>
+      <p class="lead">
+        <a href="/users/sign_up" class="lets-start">Lets Start!</a>
+      </p>
+    </div>
 
   </div>
+</div>
+<div class="col-md-12">
+  <div class="col-md-3"></div>
+  <div class="col-md-2">
+    <div class="mastfoot">
+
+        <div class="personal-website">
+          <p>Made by <a id="freddy-site-link" href="http://freddywong.website">Freddy Wong</a></p>
+        </div>  
+        <div class="social-media">
+          <a href="https://www.linkedin.com/pub/frederick-wong/78/472/6a8"><img src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/linkedin.png"></a>
+          <a href="https://github.com/freddywong"><img src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/github.png"></a>
+          <a href="https://twitter.com/FreddykfWong"><img src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/twitter.png"></a>
+        </div>  
+
+    </div>
+  </div>
+  <div class="col-md-5"></div>
 </div>

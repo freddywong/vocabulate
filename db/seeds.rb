@@ -4,7 +4,7 @@ Answer.destroy_all
 User.destroy_all
 
 user_one = User.create(
-    email: 'example@example.com',
+    email: 'Steve@vocabulate.me',
     password: 'password',
     password_confirmation: 'password'
   )
