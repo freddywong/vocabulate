@@ -1,6 +1,6 @@
 <div class="col-md-2"></div>
 
-<div class="view-container col-md-8">
+<div class="my-quiz-container col-md-8">
   <div class="app-title">
     <h2>My Quizzes</h2>
   </div>
@@ -8,7 +8,7 @@
   {{#each quizzes}}
   <div class="user-quiz" data-user-quiz={{id}}>  
 
-      <div class="view-left-container col-md-6">
+      <div class="my-quiz-left-container col-md-6">
         <div class="col-md-12">
           <h3 class="quiz-title col-md-8">{{title}}</h3>
           <img class="japan-icon col-md-4" src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/japan_icon.png">
@@ -23,10 +23,10 @@
           </div>
         </div>
       </div>
-      <div class="view-middle-container col-md-3">
+      <div class="my-quiz-middle-container col-md-3">
         <img src="{{picture_url}}" class="quiz-picture">
       </div>
-      <div class="view-right-container col-md-3">
+      <div class="my-quiz-right-container col-md-3">
         <button class="start-quiz" data-user-quiz={{id}}>  
         Start Quiz</button>
 
