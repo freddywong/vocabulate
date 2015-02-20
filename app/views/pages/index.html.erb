@@ -18,7 +18,7 @@
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
               <% else %>
               <li><%= link_to "Log In", new_user_session_path %></li>
-              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <li><%= link_to "Sign Up", new_user_session_path %></li>
               <% end %>
             </ul>
           </nav>
@@ -36,21 +36,20 @@
 
   </div>
 </div>
-<div class="col-md-12">
-  <div class="col-md-3"></div>
-  <div class="col-md-2">
-    <div class="mastfoot">
+<div>
 
-        <div class="personal-website">
-          <p>Made by <a id="freddy-site-link" href="http://freddywong.website">Freddy Wong</a></p>
-        </div>  
-        <div class="social-media">
-          <a href="https://www.linkedin.com/pub/frederick-wong/78/472/6a8"><img src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/linkedin.png"></a>
-          <a href="https://github.com/freddywong"><img src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/github.png"></a>
-          <a href="https://twitter.com/FreddykfWong"><img src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/twitter.png"></a>
-        </div>  
-
-    </div>
-  </div>
-  <div class="col-md-5"></div>
+<div class="mastfoot">
+  <div class="personal-website">
+    <p>Made by <a id="freddy-site-link" href="http://freddywong.website">Freddy Wong</a></p>
+  </div>  
+  <div class="social-media">
+    <a href="https://www.linkedin.com/pub/frederick-wong/78/472/6a8"><img src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/linkedin.png"></a>
+    <a href="https://github.com/freddywong"><img src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/github.png"></a>
+    <a href="https://twitter.com/FreddykfWong"><img src="https://s3-ap-southeast-2.amazonaws.com/vocabulate/twitter.png"></a>
+  </div>  
 </div>
+
+
+
+
+

@@ -457,3 +457,24 @@ body {
 .quiz-overview-content {
   margin-top:20px;
 }
+
+.development-notice {
+  padding: 20px 0px;
+  background-color: rgba(0,0,0,0.5);  
+}
+
+.user-details-1 {
+
+  width: 30%;
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+.user-details-2 {
+  padding-top:10px;
+  width: 25%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.3em;
+}
+
