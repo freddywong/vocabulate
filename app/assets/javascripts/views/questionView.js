@@ -6,6 +6,8 @@ var App = App || {};
   App.QuestionView = Backbone.View.extend({
 
     events: {
+      'click .review-word': 'reviewWord',
+      'click .show-question-after-review': 'showQuestionAfterReview',
       'click .list-answers': 'listAnswers',
       'click .list-quizzes': 'listQuizzes'
     },
@@ -22,10 +24,6 @@ var App = App || {};
           HandlebarsTemplates['questions/show']({ question: question })
         );
 
-        sequenceNumber += 1;
-        
-        $(".app-content").attr("data-sequence", sequenceNumber);
-
       } else {
 
         this.$el.html(
@@ -36,6 +34,24 @@ var App = App || {};
 
       return this;
 
+    },
+
+    reviewWord: function(){
+      var sequenceNumber = Number($(".app-content").attr("data-sequence"));
+      var question = App.questionsCollection.question(App.questionPool, sequenceNumber);
+      var questionId = question.attributes.id
+      var answer = App.answersCollection.get(questionId)
+      this.$el.html(
+        HandlebarsTemplates['questions/review']({question: question, answer: answer})
+      );
+
+      sequenceNumber += 1;
+
+      $(".app-content").attr("data-sequence", sequenceNumber);
+    },
+
+    showQuestionAfterReview: function() {
+      App.rootView.displayQuestion(App.QuestionView);
     },
 
     listAnswers: function(event){

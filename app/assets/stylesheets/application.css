@@ -222,7 +222,7 @@ body {
 }
 
 .back-quiz {
-  margin-top: 217px;
+  margin-top: 40px;
   background-color: Transparent;
   background-repeat:no-repeat;
   border: 3px solid #FF8B00;
@@ -478,3 +478,54 @@ body {
   font-size: 1.3em;
 }
 
+.review-container {
+  background-color:#fff;
+  border-radius: 10px;
+  color: #333;
+}
+
+.review-content {
+  padding-bottom: 120px;
+  color: #FF8B00;
+}
+
+.show-question-after-review {
+  margin-top: 220px;
+  margin-bottom: 40px;
+  background-color: #FF8B00;
+  background-repeat:no-repeat;
+  border: none;
+  border-radius: 5px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 1.5em;
+  padding: 5px 10px;
+  color: #fff; 
+}
+
+.show-question-after-review:hover {
+  background-color: #ce7000;
+}
+
+.review-word {
+  margin-top: 217px;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: 3px solid #FF8B00;
+  border-radius: 5px;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-size: 1.5em;
+  padding: 5px 10px; 
+}
+.review-word:hover {
+  color: #FF8B00;
+}
+
+.blank-padding {
+  margin-top: 40px;
+  padding: 10px 0px;
+  margin-bottom: 80px;
+}

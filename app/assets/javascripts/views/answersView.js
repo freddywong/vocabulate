@@ -11,10 +11,15 @@ var App = App || {};
     render: function(questionId, userQuizId) {
       var question = App.questionsCollection.get(questionId);
       var userQuizAnswers = App.answersCollection.userQuizAnswers(userQuizId);
+      var sequenceNumber = Number($(".app-content").attr("data-sequence"));
 
       this.$el.html(
         HandlebarsTemplates['answers/index']({ answers: userQuizAnswers.toJSON(), question: question.toJSON() })
       );
+
+      sequenceNumber += 1;
+        
+      $(".app-content").attr("data-sequence", sequenceNumber);
 
       this.$el.find(".answer").attr("data-question", questionId );
 
