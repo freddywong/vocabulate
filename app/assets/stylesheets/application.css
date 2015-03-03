@@ -70,16 +70,10 @@ body {
   
 }
 
-.question-container, .review-container {
+.question-container, .review-container, .answer-correct-container {
   background-color:#fff;
   border-radius: 10px;
   padding: 0px 40px;
-  color: #333;
-}
-
-.answer-correct-container {
-  background-color:#fff;
-  border-radius: 10px;
   color: #333;
 }
 
@@ -166,12 +160,12 @@ body {
   padding: 5px 0px;
   color: #fff; 
 }
-.list-answers:hover {
+.list-answers:hover, .show-question-after-review:hover {
   background-color: #ce7000;
 }
 
 .show-question {
-  margin-top: 370px;
+  margin-top: 300px;
   background-color: #FF8B00;
   background-repeat:no-repeat;
   border: none;
@@ -180,7 +174,7 @@ body {
   overflow: hidden;
   outline:none;
   font-size: 1.5em;
-  padding: 5px 10px;
+  padding: 5px 0px;
   color: #fff; 
 }
 
@@ -271,7 +265,6 @@ body {
 
 .correct {
   margin-top: 40px;
-  margin-bottom: 20px;
   color: #848484;
 }
 
@@ -293,7 +286,7 @@ body {
 
 .review-content{
   padding-bottom: 140px;
-  color: #FF8B00;
+    color: #FF8B00;
 }
 
 .answer-correct-content {
