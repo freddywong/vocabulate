@@ -9,7 +9,8 @@ var App = App || {};
       'click .review-word': 'reviewWord',
       'click .show-question-after-review': 'showQuestionAfterReview',
       'click .list-answers': 'listAnswers',
-      'click .list-quizzes': 'listQuizzes'
+      'click .list-quizzes': 'listQuizzes',
+      'click .back-quiz': 'backToQuiz'
     },
     initialize: function() {
       App.questionsCollection.on("add", this.render, this);
@@ -63,6 +64,10 @@ var App = App || {};
     }, 
 
     listQuizzes: function() {
+      App.router.navigate("/my_quizzes", { trigger: true });
+    }, 
+
+    backToQuiz: function() {
       App.router.navigate("/my_quizzes", { trigger: true });
     }
   });

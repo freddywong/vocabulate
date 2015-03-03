@@ -5,7 +5,8 @@ var App = App || {};
 (function(App) {
   App.AnswerView = Backbone.View.extend({
     events: {
-      'click .show-question': 'showQuestion'
+      'click .show-question': 'showQuestion',
+      'click .back-quiz': 'backToQuiz'
     },
 
     initialize: function() {
@@ -42,6 +43,10 @@ var App = App || {};
 
     showQuestion: function() {
       App.rootView.displayQuestion(App.QuestionView);
+    },
+
+    backToQuiz: function() {
+      App.router.navigate("/my_quizzes", { trigger: true });
     }
   });
 })(App);
